@@ -16,3 +16,5 @@
         <h2>📌 Autor</h2>
         <p>Yasmin Rosa</p>
 </section>
+![image](https://github.com/user-attachments/assets/e39ccc14-6201-4d48-8ef2-78c2f059eaee)
+
