@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=calendar_month" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+<title>Agenda</title>
+
+</head>
+<body>
+    
+    <header>
+        <h1>Agenda</h1>
+    </header>
+
+    <!-- Container de início -->
+    <main>
+        <section  id="sectionToday">
+            <h2>Compromissos de hoje</h2>
+            <ul id="commitListToday"></ul>
+        </section>
+
+        <section>
+            <h2>Próximos Compromissos</h2>
+            <ul id="commitListNext">
+            </ul>
+            
+        </section>
+
+        <section>
+            <h2>Compromissos Futuro</h2>
+            <ul id="commitListLater">
+            </ul>
+           
+        </section>    
+    </main>
+
+    <button id="btnAdd">Adicionar</button>
+
+    <!-- Modal de adcionar novo compromisso -->
+    <div class="modal" id="modalAddCommit">
+        <div class="modal-content">
+            <h3>Novo compromisso</h3>
+            
+            <h4>Título</h4>
+            <input type="text" id="title" placeholder="Escreva um título...">
+            
+            <h4>Descrição</h4>
+            <input id="description" placeholder="Descreva seu compromisso..."></input>
+            
+            <h4>Data</h4>
+            <input type="date" id="date">
+
+            <div class="buttons">
+                <button onclick="btnAddCommit()">Adicionar</button>
+                <button onclick="btnCloseModal('modalAddCommit')">Cancelar</button>
+            </div>
+            <div id="alert" class="alert"></div>
+        </div>
+    </div>
+
+    <!-- Modal de detalhes do compromisso -->
+     <div class="modal" id="modalDetailCommit">
+        <div class="modal-content">
+            <div class="containerDetail">
+                <h3 id="detailTitle"></h3>
+                <p id="detailDate"></p>
+            </div>
+            <p id="detailDescription"></p>
+            <div class="containerDetailButton">
+                <!-- <button id="btnEdit">Editar</button> -->
+                <button id="btnDelete">Excluir</button>
+                <button onclick="btnCloseModal('modalDetailCommit')">Fechar</button>
+            </div>
+        </div>
+     </div>
+   
+    <script src="script.js"></script>
+
+</body>
+</html>
+
